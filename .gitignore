@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Mike Coats <mike.coats@nature.scot>
+# SPDX-License-Identifier: MIT
+
+# IDE settings
+.idea/
+.vscode/
+
+# Python environment
+.venv/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Run-time data caches
+*.pkl
+models/*.pkl

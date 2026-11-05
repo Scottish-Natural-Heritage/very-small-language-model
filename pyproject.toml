@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2026 Mike Coats <mike.coats@nature.scot>
+# SPDX-License-Identifier: MIT
+
+[project]
+name = "very-small-language-model"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+keywords = [
+]
+authors = [{ name = "Mike Coats", email = "mike.coats@nature.scot" }]
+license = "MIT"
+license-files = ["LICEN[CS]ES/*"]
+requires-python = ">=3.13"
+classifiers = ["Development Status :: 3 - Alpha"]
+dependencies = [
+    "jupyterlab==4.6.3",
+    "ipynb==0.5.1",
+    "requests==2.34.2",
+    "feedparser==6.0.14",
+    "beautifulsoup4==4.15.0",
+    "lxml==6.1.2",
+    "Jinja2==3.1.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/Scottish-Natural-Heritage/very-small-language-model"
+Repository = "https://github.com/Scottish-Natural-Heritage/very-small-language-model.git"
+Issues = "https://github.com/Scottish-Natural-Heritage/very-small-language-model/issues"
+
+[project.optional-dependencies]
+optional = ["ruff~=0.15.15", "reuse~=6.2.0", "ty~= 0.0.40"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "W", "C901", "B"]
+
+[tool.ruff.format]
+quote-style = "single"
+docstring-code-format = true
+line-ending = "lf"

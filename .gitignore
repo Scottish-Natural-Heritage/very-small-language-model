@@ -9,6 +9,7 @@
 .venv/
 .ipynb_checkpoints/
 *.egg-info/
+.ruff_cache/
 
 # Run-time data caches
 *.pkl

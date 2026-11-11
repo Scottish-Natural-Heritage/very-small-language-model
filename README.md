@@ -12,6 +12,16 @@ The Robots Are (Maybe Not) Taking Over
 - with
   ~~Artificial Intelligence~~ Algorithmic Inertia
 
+## Instructions
+
+```shell
+$ python -m venv .venv --prompt=vslm
+
+$ source .venv/Scripts/activate
+
+$ pip install -e .[optional]
+```
+
 ## License
 
 Unless stated otherwise, the codebase is released under the [MIT License](LICENSES/MIT.txt).

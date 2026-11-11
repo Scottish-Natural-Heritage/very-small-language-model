@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Mike Coats <mike.coats@nature.scot>
+# SPDX-License-Identifier: MIT
+
 """Shared n-gram language model building and text generation code.
 
 This module is the single place where the model-building (``build_*_model``)

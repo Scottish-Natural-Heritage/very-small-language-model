@@ -1,0 +1,2 @@
+# SPDX-FileCopyrightText: 2026 Mike Coats <mike.coats@nature.scot>
+# SPDX-License-Identifier: MIT

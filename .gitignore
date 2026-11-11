@@ -10,7 +10,7 @@
 .ipynb_checkpoints/
 *.egg-info/
 .ruff_cache/
-__pycache__/
+**/__pycache__/
 
 # Run-time data caches
 *.pkl

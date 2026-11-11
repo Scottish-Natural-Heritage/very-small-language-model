@@ -78,7 +78,8 @@ def autocomplete_suggestions(partial_word, limit=AUTOCOMPLETE_LIMIT):
     # (most common first), for use as a topic autocomplete feed.
     partial_word = partial_word.lower()
     matches = [
-        word for word in vocabulary
+        word
+        for word in vocabulary
         if word.startswith(partial_word) and words1[word] >= MIN_AUTOCOMPLETE_OCCURRENCES
     ]
     matches.sort(key=lambda word: words1[word], reverse=True)

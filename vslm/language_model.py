@@ -76,12 +76,12 @@ def build_forward2_model(sentences_words):
     # Loop over every sentence in every blog.
     for sentence in sentences_words:
         tokens = (
-                [
-                    'START',
-                    'START',
-                ]
-                + sentence
-                + ['END', 'END']
+            [
+                'START',
+                'START',
+            ]
+            + sentence
+            + ['END', 'END']
         )
         # For each word "from, from" & "to" pair, add them to the model.
         for idx in range(0, len(tokens) - 2):
@@ -95,12 +95,12 @@ def build_backward2_model(sentences_words):
     model = {}
     for sentence in sentences_words:
         tokens = (
-                [
-                    'END',
-                    'END',
-                ]
-                + list(reversed(sentence))
-                + ['START', 'START']
+            [
+                'END',
+                'END',
+            ]
+            + list(reversed(sentence))
+            + ['START', 'START']
         )
         # For each word "from, from" & "to" pair, add them to the model.
         for idx in range(0, len(tokens) - 2):
@@ -115,13 +115,13 @@ def build_forward3_model(sentences_words):
     # Loop over every sentence in every blog.
     for sentence in sentences_words:
         tokens = (
-                [
-                    'START',
-                    'START',
-                    'START',
-                ]
-                + sentence
-                + ['END', 'END', 'END']
+            [
+                'START',
+                'START',
+                'START',
+            ]
+            + sentence
+            + ['END', 'END', 'END']
         )
         # For each word "from, from, from" & "to" pair, add them to the model.
         for idx in range(0, len(tokens) - 3):
@@ -135,13 +135,13 @@ def build_backward3_model(sentences_words):
     model = {}
     for sentence in sentences_words:
         tokens = (
-                [
-                    'END',
-                    'END',
-                    'END',
-                ]
-                + list(reversed(sentence))
-                + ['START', 'START', 'START']
+            [
+                'END',
+                'END',
+                'END',
+            ]
+            + list(reversed(sentence))
+            + ['START', 'START', 'START']
         )
         # For each word "from, from, from" & "to" pair, add them to the model.
         for idx in range(0, len(tokens) - 3):
@@ -340,7 +340,9 @@ def generate_sentence_backward3(in_trigram_model, in_bigram_model, in_unigram_mo
     return sentence
 
 
-def generate_trigram_sentence(seed_word, forward3, forward2, forward1, backward3, backward2, backward1):
+def generate_trigram_sentence(
+    seed_word, forward3, forward2, forward1, backward3, backward2, backward1
+):
     # Build one full sentence (as a list of words) using the trigram models.
     generated_start = list(
         reversed(generate_sentence_backward3(backward3, backward2, backward1, seed_word))

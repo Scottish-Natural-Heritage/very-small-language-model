@@ -20,6 +20,8 @@ $ python -m venv .venv --prompt=vslm
 $ source .venv/Scripts/activate
 
 $ pip install -e .[optional]
+
+$ jupyter lab
 ```
 
 ## License
